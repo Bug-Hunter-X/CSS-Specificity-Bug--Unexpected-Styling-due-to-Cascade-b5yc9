@@ -1,0 +1,25 @@
+The following CSS code snippet demonstrates an uncommon bug related to the specificity of CSS selectors and the cascade:
+
+```css
+div {
+  color: blue;
+}
+
+.container div {
+  color: red;
+}
+
+#myDiv {
+  color: green;
+}
+
+#myDiv.container {
+  color: purple;
+}
+
+#myDiv.container div {
+  color: orange;
+}
+```
+
+In this example, the color of an element depends on the order and specificity of the rules, which could cause unexpected behavior depending on the HTML structure.  The cascade and specificity can lead to issues where you believe a particular rule will apply but another, less obvious one does instead.
